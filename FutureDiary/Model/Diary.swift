@@ -7,12 +7,10 @@
 
 import Foundation
 public struct Diary{
-    let index:Int;
     let date:Date;
-    let emotion:String;
+    let emotion:String?;
     let content:String;
-    init(index:Int, date:Date, emotion:String, content:String){
-        self.index = index;
+    init(date:Date, emotion:String?, content:String){
         self.date = date;
         self.emotion = emotion;
         self.content = content;

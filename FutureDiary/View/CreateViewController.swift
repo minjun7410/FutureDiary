@@ -12,7 +12,8 @@ class CreateViewController: UIViewController {
     @IBOutlet weak var textEmotion: UITextField!
     
     @IBOutlet weak var textContent: UITextView!
-    @IBOutlet weak var calanderSwitch: UISwitch!
+    
+    @IBOutlet weak var calendarSwitch: UISwitch!
     
     var dataDelegate: SendDataDelegate?
     override func viewDidLoad() {
@@ -22,8 +23,11 @@ class CreateViewController: UIViewController {
     }
     
     @IBAction func completeButtonPushed(_ sender: UIButton) {
-        guard let content = textContent?.text else {return}
-        dataDelegate?.receiveData(responce: content)
+        guard let date = self.date?.date else {return}
+        guard let content = self.textContent?.text else {return}
+        let emotion:String? = self.textEmotion.text
+        let doCalendar:Bool = calendarSwitch.isOn
+        dataDelegate?.receiveData(date:date, emotion:emotion, content:content, doCalendar: doCalendar)
         dismiss(animated: true)
     }
     
