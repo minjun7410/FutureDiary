@@ -15,12 +15,14 @@ class MainViewController: UIViewController, SendDataDelegate, UITableViewDelegat
     
     @IBOutlet weak var diaryListTableView: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        diaryListViewModel.diaryList.count
+        return diaryListViewModel.diaryList.count
     }
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "diaryCell", for: indexPath) as? DiaryTableViewCell else {return UITableViewCell()}
-        
+        cell.mainVC = self
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
@@ -51,12 +53,4 @@ class MainViewController: UIViewController, SendDataDelegate, UITableViewDelegat
 
     }
 }
-class DiaryTableViewCell: UITableViewCell{
-    
-    @IBOutlet weak var diaryTableViewCellDate: UILabel!
-    
-    @IBOutlet weak var diaryTableViewCellEmotion: UILabel!
-    
-    @IBOutlet weak var diaryTableViewCellContent: UILabel!
-    
-}
+

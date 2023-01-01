@@ -16,6 +16,8 @@
 		8ACC212A295BFC0800DE104F /* DiaryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC2129295BFC0800DE104F /* DiaryListViewModel.swift */; };
 		8AD3B6B62959772B008B296C /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD3B6B52959772B008B296C /* CreateViewController.swift */; };
 		8AD3B6B92959C51B008B296C /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD3B6B82959C51B008B296C /* Diary.swift */; };
+		8AD5117A2961ADCD00A7B8FB /* DiaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD511792961ADCD00A7B8FB /* DiaryDetailViewController.swift */; };
+		8AD5117C2961B35700A7B8FB /* DiaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD5117B2961B35700A7B8FB /* DiaryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		8ACC2129295BFC0800DE104F /* DiaryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewModel.swift; sourceTree = "<group>"; };
 		8AD3B6B52959772B008B296C /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		8AD3B6B82959C51B008B296C /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
+		8AD511792961ADCD00A7B8FB /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
+		8AD5117B2961B35700A7B8FB /* DiaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				8A3E848D2958566000D4DB99 /* MainViewController.swift */,
 				8A3E848F2958566000D4DB99 /* Main.storyboard */,
 				8AD3B6B52959772B008B296C /* CreateViewController.swift */,
+				8AD511792961ADCD00A7B8FB /* DiaryDetailViewController.swift */,
+				8AD5117B2961B35700A7B8FB /* DiaryTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,9 +196,11 @@
 				8AD3B6B62959772B008B296C /* CreateViewController.swift in Sources */,
 				8AD3B6B92959C51B008B296C /* Diary.swift in Sources */,
 				8A3E848E2958566000D4DB99 /* MainViewController.swift in Sources */,
+				8AD5117A2961ADCD00A7B8FB /* DiaryDetailViewController.swift in Sources */,
 				8A3E848A2958566000D4DB99 /* AppDelegate.swift in Sources */,
 				8ACC212A295BFC0800DE104F /* DiaryListViewModel.swift in Sources */,
 				8A3E848C2958566000D4DB99 /* SceneDelegate.swift in Sources */,
+				8AD5117C2961B35700A7B8FB /* DiaryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
