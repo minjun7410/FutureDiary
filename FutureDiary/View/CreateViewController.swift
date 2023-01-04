@@ -10,9 +10,7 @@ import UIKit
 class CreateViewController: UIViewController {
     @IBOutlet weak var date: UIDatePicker!
     @IBOutlet weak var textEmotion: UITextField!
-    
     @IBOutlet weak var textContent: UITextView!
-    
     @IBOutlet weak var calendarSwitch: UISwitch!
     
     var dataDelegate: SendDataDelegate?

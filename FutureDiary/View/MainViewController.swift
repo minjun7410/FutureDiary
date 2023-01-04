@@ -11,7 +11,7 @@ protocol SendDataDelegate{
 }
 class MainViewController: UIViewController, SendDataDelegate, UITableViewDelegate, UITableViewDataSource {
     
-    private let diaryListViewModel = DiaryListViewModel()
+    let diaryListViewModel = DiaryListViewModel()
     
     @IBOutlet weak var diaryListTableView: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -23,13 +23,14 @@ class MainViewController: UIViewController, SendDataDelegate, UITableViewDelegat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "diaryCell", for: indexPath) as? DiaryTableViewCell else {return UITableViewCell()}
         cell.mainVC = self
+        cell.cellData = diaryListViewModel.diaryList[indexPath.row]
+        cell.index = indexPath.row
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        
-        cell.diaryTableViewCellDate.text = dateFormatter.string(from: diaryListViewModel.diaryList[indexPath.row].date)
-        cell.diaryTableViewCellEmotion.text = diaryListViewModel.diaryList[indexPath.row].emotion
-        cell.diaryTableViewCellContent.text = diaryListViewModel.diaryList[indexPath.row].content
-        
+        cell.diaryTableViewCellDate.text = dateFormatter.string(from: cell.cellData.date)
+        cell.diaryTableViewCellEmotion.text = cell.cellData.emotion
+        cell.diaryTableViewCellContent.text = cell.cellData.content
         return cell
     }
     
@@ -48,9 +49,9 @@ class MainViewController: UIViewController, SendDataDelegate, UITableViewDelegat
     }
     
     func receiveData(date:Date, emotion:String?, content:String, doCalendar:Bool) {
-        diaryListViewModel.createDiaryData(date, emotion: emotion, content: content)
+        diaryListViewModel.createDiaryData(date:date, emotion: emotion, content: content)
         diaryListTableView.reloadData()
-
+        
     }
 }
 

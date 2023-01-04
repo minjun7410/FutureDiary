@@ -10,6 +10,7 @@ public struct Diary{
     let date:Date;
     let emotion:String?;
     let content:String;
+    
     init(date:Date, emotion:String?, content:String){
         self.date = date;
         self.emotion = emotion;

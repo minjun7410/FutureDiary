@@ -6,9 +6,14 @@
 //
 
 import UIKit
-
-class DiaryTableViewCell: UITableViewCell{
-    var mainVC: UIViewController?
+protocol DeleteDiaryDelegate {
+    func deleteDiary(index:Int) -> ()
+}
+class DiaryTableViewCell: UITableViewCell, DeleteDiaryDelegate{
+    var mainVC: MainViewController?
+    var cellData: Diary!
+    var index: Int?
+    
     @IBOutlet weak var diaryTableViewCellDate: UILabel!
     
     @IBOutlet weak var diaryTableViewCellEmotion: UILabel!
@@ -19,20 +24,25 @@ class DiaryTableViewCell: UITableViewCell{
         super.awakeFromNib()
         let tabGesture = UITapGestureRecognizer(target:self, action: #selector(cellTabEvent(sender:)))
         self.addGestureRecognizer(tabGesture)
+        
+        
+        
     }
     @objc func cellTabEvent(sender: UITapGestureRecognizer) {
-        print("Touched!")
         guard let vc = mainVC?.storyboard?.instantiateViewController(withIdentifier: "diaryDetailViewController") as? DiaryDetailViewController else {return}
-   
+        
+        vc.diaryCell = self
+        vc.cellData = self.cellData
+        vc.index = self.index
+        
         vc.modalTransitionStyle = .coverVertical
         vc.modalPresentationStyle = .fullScreen
         
-        vc.dateText = diaryTableViewCellDate.text!
-        if let emotion = diaryTableViewCellEmotion.text {
-            vc.emotionText = emotion
-        }
-        vc.contentText = diaryTableViewCellContent.text!
         mainVC?.present(vc, animated: true)
         
+    }
+    func deleteDiary(index:Int){
+        mainVC?.diaryListViewModel.deleteDiaryData(index: index)
+        mainVC?.diaryListTableView.reloadData()
     }
 }
