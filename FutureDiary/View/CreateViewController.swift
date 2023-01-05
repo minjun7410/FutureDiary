@@ -13,10 +13,15 @@ class CreateViewController: UIViewController {
     @IBOutlet weak var textContent: UITextView!
     @IBOutlet weak var calendarSwitch: UISwitch!
     
+    @IBOutlet weak var imageView: UIImageView!
+    
     var dataDelegate: SendDataDelegate?
+    let imgPicker = UIImagePickerController()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("createView is Created")
+        self.imgPicker.sourceType = .photoLibrary
+        self.imgPicker.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -26,6 +31,20 @@ class CreateViewController: UIViewController {
         let emotion:String? = self.textEmotion.text
         let doCalendar:Bool = calendarSwitch.isOn
         dataDelegate?.receiveData(date:date, emotion:emotion, content:content, doCalendar: doCalendar)
+        dismiss(animated: true)
+    }
+    
+    @IBAction func imgInsertBtnPushed(_ sender: Any) {
+        imgPicker.sourceType = .photoLibrary
+        imgPicker.delegate = self
+        present(imgPicker, animated: true)
+    }
+}
+extension CreateViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let img = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            imageView.image = img
+        }
         dismiss(animated: true)
     }
     
