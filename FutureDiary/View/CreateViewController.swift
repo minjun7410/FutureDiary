@@ -21,6 +21,7 @@ class CreateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imgPicker.sourceType = .photoLibrary
+        self.imgPicker.allowsEditing = true
         self.imgPicker.delegate = self
         // Do any additional setup after loading the view.
     }
@@ -42,7 +43,8 @@ class CreateViewController: UIViewController {
 }
 extension CreateViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let img = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+        if let img = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
+            imageView.contentMode = .scaleAspectFit
             imageView.image = img
         }
         dismiss(animated: true)
