@@ -7,7 +7,7 @@
 
 import UIKit
 protocol SendDataDelegate{
-    func receiveData(date:Date, emotion:String?, content:String, doCalendar:Bool) -> Void
+    func receiveData(date:Date, emotion:String?, content:String, doCalendar:Bool, imageData:Data?) -> Void
 }
 class MainViewController: UIViewController, SendDataDelegate, UITableViewDelegate, UITableViewDataSource {
     
@@ -31,6 +31,10 @@ class MainViewController: UIViewController, SendDataDelegate, UITableViewDelegat
         cell.diaryTableViewCellDate.text = dateFormatter.string(from: cell.cellData.date)
         cell.diaryTableViewCellEmotion.text = cell.cellData.emotion
         cell.diaryTableViewCellContent.text = cell.cellData.content
+        if let imageData = cell.cellData.imageData{
+            cell.diaryTableViewCellImage.isHidden = false
+            cell.diaryTableViewCellImage.image = UIImage(data: imageData)
+        }
         return cell
     }
     
@@ -48,8 +52,8 @@ class MainViewController: UIViewController, SendDataDelegate, UITableViewDelegat
         performSegue(withIdentifier: "CreateSegue", sender: nil)
     }
     
-    func receiveData(date:Date, emotion:String?, content:String, doCalendar:Bool) {
-        diaryListViewModel.createDiaryData(date:date, emotion: emotion, content: content)
+    func receiveData(date:Date, emotion:String?, content:String, doCalendar:Bool, imageData:Data?) {
+        diaryListViewModel.createDiaryData(date:date, emotion: emotion, content: content, imageData:imageData)
         diaryListTableView.reloadData()
         
     }

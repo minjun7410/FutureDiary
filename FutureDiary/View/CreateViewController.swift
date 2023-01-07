@@ -32,8 +32,9 @@ class CreateViewController: UIViewController {
         guard let date = self.date?.date else {return}
         guard let content = self.textContent?.text else {return}
         let emotion:String? = self.textEmotion.text
-        let doCalendar:Bool = calendarSwitch.isOn
-        dataDelegate?.receiveData(date:date, emotion:emotion, content:content, doCalendar: doCalendar)
+        let doCalendar:Bool = self.calendarSwitch.isOn
+        let imageData = self.imageView.image?.pngData()
+        dataDelegate?.receiveData(date:date, emotion:emotion, content:content, doCalendar: doCalendar, imageData: imageData)
         dismiss(animated: true)
     }
     
@@ -51,6 +52,7 @@ extension CreateViewController: UIImagePickerControllerDelegate, UINavigationCon
             imageView.contentMode = .scaleAspectFit
             imageView.image = img
         }
+        
         dismiss(animated: true)
     }
     

@@ -20,6 +20,7 @@ class DiaryTableViewCell: UITableViewCell, DeleteDiaryDelegate{
     
     @IBOutlet weak var diaryTableViewCellContent: UILabel!
     
+    @IBOutlet weak var diaryTableViewCellImage: UIImageView!
     override func awakeFromNib() { //Instance 화 될 때
         super.awakeFromNib()
         let tabGesture = UITapGestureRecognizer(target:self, action: #selector(cellTabEvent(sender:)))

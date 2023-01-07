@@ -15,8 +15,8 @@ class DiaryListViewModel: NSObject{
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         diaryList = []
     }
-    func createDiaryData(date:Date, emotion: String?, content: String){
-        diary = Diary(date: date, emotion: emotion, content: content)
+    func createDiaryData(date:Date, emotion: String?, content: String, imageData:Data?){
+        diary = Diary(date: date, emotion: emotion, content: content, imageData: imageData)
         print("DiaryList appended ( \(date), \(content) ) in DiaryCreateViewModel")
         diaryList.append(diary)
     }

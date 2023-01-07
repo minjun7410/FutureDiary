@@ -7,13 +7,14 @@
 
 import Foundation
 public struct Diary{
-    let date:Date;
-    let emotion:String?;
-    let content:String;
-    
-    init(date:Date, emotion:String?, content:String){
-        self.date = date;
-        self.emotion = emotion;
-        self.content = content;
+    let date:Date
+    let emotion:String?
+    let content:String
+    let imageData:Data?
+    init(date:Date, emotion:String?, content:String, imageData:Data?){
+        self.date = date
+        self.emotion = emotion
+        self.content = content
+        self.imageData = imageData
     }
 }
