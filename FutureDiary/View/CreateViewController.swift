@@ -15,6 +15,8 @@ class CreateViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var imgInsertBtn: UIButton!
+    
     var dataDelegate: SendDataDelegate?
     let imgPicker = UIImagePickerController()
 
@@ -38,12 +40,14 @@ class CreateViewController: UIViewController {
     @IBAction func imgInsertBtnPushed(_ sender: Any) {
         imgPicker.sourceType = .photoLibrary
         imgPicker.delegate = self
+        imageView.isHidden = false
+        imgInsertBtn.isHidden = true
         present(imgPicker, animated: true)
     }
 }
 extension CreateViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let img = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
+        if let img = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             imageView.contentMode = .scaleAspectFit
             imageView.image = img
         }
