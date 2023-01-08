@@ -16,6 +16,8 @@ class DiaryDetailViewController : UIViewController {
     
     @IBOutlet weak var content: UILabel!
     
+    @IBOutlet weak var diaryImage: UIImageView!
+    
     var index: Int!
     
     override func viewDidLoad() {
@@ -26,6 +28,12 @@ class DiaryDetailViewController : UIViewController {
         date.text = dateFormatter.string(from:cellData.date)
         emotion.text = cellData.emotion
         content.text = cellData.content
+        if let imageData = cellData.imageData{
+            diaryImage.isHidden = false
+            diaryImage.image = UIImage(data: imageData)
+            
+        }
+
     }
     @IBAction func backBtnPushedEvent(_ sender: Any) {
         self.presentingViewController?.dismiss(animated: true)
