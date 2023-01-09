@@ -35,6 +35,11 @@ class MainViewController: UIViewController, SendDataDelegate, UITableViewDelegat
             cell.diaryTableViewCellImage.isHidden = false
             cell.diaryTableViewCellImage.image = UIImage(data: imageData)
         }
+        else{
+            cell.diaryTableViewCellImage.isHidden = true
+            cell.diaryTableViewCellImage.image = nil
+        }
+        
         return cell
     }
     
