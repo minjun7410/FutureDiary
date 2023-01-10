@@ -18,7 +18,7 @@ class MainViewController: UIViewController, SendDataDelegate, UITableViewDelegat
         return diaryListViewModel.diaryList.count
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
+        return UITableView.automaticDimension
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "diaryCell", for: indexPath) as? DiaryTableViewCell else {return UITableViewCell()}
@@ -45,6 +45,9 @@ class MainViewController: UIViewController, SendDataDelegate, UITableViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.diaryListTableView.rowHeight = UITableView.automaticDimension
+
+        self.diaryListTableView.estimatedRowHeight = 100
         // Do any additional setup after loading the view.
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
