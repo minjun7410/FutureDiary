@@ -10,20 +10,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="6U4-fp-Ux7">
             <objects>
-                <viewController id="n5g-uJ-pBX" sceneMemberID="viewController">
+                <viewController id="n5g-uJ-pBX" customClass="LogInViewController" customModule="FutureDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jRy-Gw-cqn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBr-dG-paS">
-                                <rect key="frame" x="45.000000000000007" y="90" width="93.666666666666686" height="40"/>
+                                <rect key="frame" x="45.000000000000007" y="90" width="93.666666666666686" height="43"/>
                                 <attributedString key="attributedText">
                                     <fragment content="로그인">
                                         <attributes>
-                                            <font key="NSFont" size="36" name=".AppleSDGothicNeoI-Bold"/>
+                                            <font key="NSFont" metaFont="system" size="36"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -58,6 +58,9 @@
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" systemColor="secondaryLabelColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="logInButtonClicked:" destination="n5g-uJ-pBX" eventType="touchUpInside" id="Fv3-Ud-5av"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -80,6 +83,11 @@
                             <constraint firstItem="t6X-DB-6Ub" firstAttribute="trailing" secondItem="1iB-DX-Af9" secondAttribute="trailing" constant="20" id="xkx-1s-Iq9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextBar" destination="Xng-tZ-GMw" id="tIz-jx-AJc"/>
+                        <outlet property="passwordTextBar" destination="2PJ-xu-2s3" id="iaN-4U-Uzk"/>
+                        <outlet property="statusBar" destination="xgA-le-vD7" id="hcJ-a5-77i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Np-b6-u6d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,11 +133,11 @@
                                 <buttonConfiguration key="configuration" style="plain" title="가입"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wd-jN-BD1">
-                                <rect key="frame" x="45.000000000000007" y="90" width="124.66666666666669" height="40"/>
+                                <rect key="frame" x="45.000000000000007" y="90" width="124.66666666666669" height="43"/>
                                 <attributedString key="attributedText">
                                     <fragment content="회원가입">
                                         <attributes>
-                                            <font key="NSFont" size="36" name=".AppleSDGothicNeoI-Bold"/>
+                                            <font key="NSFont" metaFont="system" size="36"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
