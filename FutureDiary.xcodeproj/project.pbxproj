@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CEC1E2B4DEDCF7163E0CF30 /* Pods_FutureDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4556EB7F4A4CBACDBB70A76B /* Pods_FutureDiary.framework */; };
 		8A3E848A2958566000D4DB99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E84892958566000D4DB99 /* AppDelegate.swift */; };
 		8A3E848C2958566000D4DB99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E848B2958566000D4DB99 /* SceneDelegate.swift */; };
 		8A3E848E2958566000D4DB99 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E848D2958566000D4DB99 /* MainViewController.swift */; };
 		8A3E84912958566000D4DB99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A3E848F2958566000D4DB99 /* Main.storyboard */; };
 		8A3E84932958566100D4DB99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A3E84922958566100D4DB99 /* Assets.xcassets */; };
 		8A3E84962958566100D4DB99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A3E84942958566100D4DB99 /* LaunchScreen.storyboard */; };
+		8A494904296E7F1B00B0E02C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A494903296E7F1B00B0E02C /* GoogleService-Info.plist */; };
 		8ACC212A295BFC0800DE104F /* DiaryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC2129295BFC0800DE104F /* DiaryListViewModel.swift */; };
 		8AD3B6B62959772B008B296C /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD3B6B52959772B008B296C /* CreateViewController.swift */; };
 		8AD3B6B92959C51B008B296C /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD3B6B82959C51B008B296C /* Diary.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4556EB7F4A4CBACDBB70A76B /* Pods_FutureDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FutureDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6433804902D522FC60AAC1F6 /* Pods-FutureDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FutureDiary.release.xcconfig"; path = "Target Support Files/Pods-FutureDiary/Pods-FutureDiary.release.xcconfig"; sourceTree = "<group>"; };
 		8A3E84862958566000D4DB99 /* FutureDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FutureDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3E84892958566000D4DB99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A3E848B2958566000D4DB99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,11 +33,14 @@
 		8A3E84922958566100D4DB99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A3E84952958566100D4DB99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A3E84972958566100D4DB99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A4948FD296DB9B200B0E02C /* FutureDiaryRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FutureDiaryRelease.entitlements; sourceTree = "<group>"; };
+		8A494903296E7F1B00B0E02C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8ACC2129295BFC0800DE104F /* DiaryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewModel.swift; sourceTree = "<group>"; };
 		8AD3B6B52959772B008B296C /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		8AD3B6B82959C51B008B296C /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 		8AD511792961ADCD00A7B8FB /* DiaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDetailViewController.swift; sourceTree = "<group>"; };
 		8AD5117B2961B35700A7B8FB /* DiaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewCell.swift; sourceTree = "<group>"; };
+		CFB828C53A485029324BCF9F /* Pods-FutureDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FutureDiary.debug.xcconfig"; path = "Target Support Files/Pods-FutureDiary/Pods-FutureDiary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +48,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CEC1E2B4DEDCF7163E0CF30 /* Pods_FutureDiary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C7C2EFE7975FC92ED532CAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4556EB7F4A4CBACDBB70A76B /* Pods_FutureDiary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8A3E847D2958566000D4DB99 = {
 			isa = PBXGroup;
 			children = (
 				8A3E84882958566000D4DB99 /* FutureDiary */,
 				8A3E84872958566000D4DB99 /* Products */,
+				8C42C9D3573774EFF3BCDFE6 /* Pods */,
+				5C7C2EFE7975FC92ED532CAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +84,8 @@
 		8A3E84882958566000D4DB99 /* FutureDiary */ = {
 			isa = PBXGroup;
 			children = (
+				8A494903296E7F1B00B0E02C /* GoogleService-Info.plist */,
+				8A4948FD296DB9B200B0E02C /* FutureDiaryRelease.entitlements */,
 				8ACC2128295BFBD300DE104F /* ViewModel */,
 				8AD3B6B72959C507008B296C /* Model */,
 				8AD3B6B4295976F1008B296C /* View */,
@@ -122,6 +142,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8C42C9D3573774EFF3BCDFE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CFB828C53A485029324BCF9F /* Pods-FutureDiary.debug.xcconfig */,
+				6433804902D522FC60AAC1F6 /* Pods-FutureDiary.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A3E849A2958566100D4DB99 /* Build configuration list for PBXNativeTarget "FutureDiary" */;
 			buildPhases = (
+				529F000DBCC2A16FDB658FFC /* [CP] Check Pods Manifest.lock */,
 				8A3E84822958566000D4DB99 /* Sources */,
 				8A3E84832958566000D4DB99 /* Frameworks */,
 				8A3E84842958566000D4DB99 /* Resources */,
+				259902BA72316E1447C51037 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,12 +213,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A3E84962958566100D4DB99 /* LaunchScreen.storyboard in Resources */,
+				8A494904296E7F1B00B0E02C /* GoogleService-Info.plist in Resources */,
 				8A3E84932958566100D4DB99 /* Assets.xcassets in Resources */,
 				8A3E84912958566000D4DB99 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		259902BA72316E1447C51037 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FutureDiary/Pods-FutureDiary-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FutureDiary/Pods-FutureDiary-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FutureDiary/Pods-FutureDiary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		529F000DBCC2A16FDB658FFC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FutureDiary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8A3E84822958566000D4DB99 /* Sources */ = {
@@ -342,12 +417,14 @@
 		};
 		8A3E849B2958566100D4DB99 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFB828C53A485029324BCF9F /* Pods-FutureDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MZCFNY8DU5;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FutureDiary/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -364,6 +441,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.minjun7410.FutureDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -372,12 +450,15 @@
 		};
 		8A3E849C2958566100D4DB99 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6433804902D522FC60AAC1F6 /* Pods-FutureDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FutureDiary/FutureDiaryRelease.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MZCFNY8DU5;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FutureDiary/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -394,6 +475,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.minjun7410.FutureDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

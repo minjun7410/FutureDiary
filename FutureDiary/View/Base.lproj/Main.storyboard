@@ -104,6 +104,9 @@
                                                                     </subviews>
                                                                 </stackView>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="SyS-eE-5dA" firstAttribute="leading" secondItem="sWR-hX-JdV" secondAttribute="leading" id="xU9-l5-U0V"/>
+                                                            </constraints>
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
