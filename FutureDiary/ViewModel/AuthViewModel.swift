@@ -16,7 +16,7 @@ class AuthViewModel : NSObject {
         }
         else {return false}
     }
-    func logIn(email:String, password:String) -> Bool {
+    func logIn(email:String, password:String){
         print("Try Login: \(email), \(password)")
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if user != nil {
@@ -27,7 +27,5 @@ class AuthViewModel : NSObject {
                 print("Log In Failed. \(error.debugDescription)")
             }
         }
-        
-        return true
     }
 }
