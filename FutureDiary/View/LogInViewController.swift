@@ -27,10 +27,19 @@ class LogInViewController : UIViewController {
             if user != nil {
                 self.statusBar.text = "로그인 성공"
                 print("Log In Success!")
+                self.view.window?.rootViewController?.dismiss(animated: true, completion: {
+                    guard let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "mainViewController") as? MainViewController else {return}
+                    mainVC.modalPresentationStyle = .fullScreen
+                    self.present(mainVC, animated: true)
+                })
+                
             }
             else{
+                
                 self.statusBar.text = "이메일 또는 비밀번호가 옳지 않습니다."
                 print("Log In Failed. \(error.debugDescription)")
             }
-        }    }
+        }
+        
+    }
 }

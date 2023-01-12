@@ -14,6 +14,7 @@ class MainViewController: UIViewController, SendDataDelegate, UITableViewDelegat
     let diaryListViewModel = DiaryListViewModel()
     
     @IBOutlet weak var diaryListTableView: UITableView!
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return diaryListViewModel.diaryList.count
     }
@@ -46,7 +47,6 @@ class MainViewController: UIViewController, SendDataDelegate, UITableViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         self.diaryListTableView.rowHeight = UITableView.automaticDimension
-
         self.diaryListTableView.estimatedRowHeight = 100
         // Do any additional setup after loading the view.
     }
