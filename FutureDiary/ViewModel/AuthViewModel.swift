@@ -16,16 +16,8 @@ class AuthViewModel : NSObject {
         }
         else {return false}
     }
-    func logIn(email:String, password:String){
+    func logIn(email:String, password:String, completeClosure:((AuthDataResult?, (any Error)?) -> Void)?){
         print("Try Login: \(email), \(password)")
-        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-            if user != nil {
-                self.currentUser = user?.description
-                print("Log In Success!")
-            }
-            else{
-                print("Log In Failed. \(error.debugDescription)")
-            }
-        }
+        Auth.auth().signIn(withEmail: email, password: password, completion: completeClosure)
     }
 }

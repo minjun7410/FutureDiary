@@ -23,11 +23,14 @@ class LogInViewController : UIViewController {
         let email:String = emailTextBar.text!
         let password:String = passwordTextBar.text!
         authViewModel.logIn(email:email, password:password)
-//        {
-//            statusBar.text = "로그인 성공"
-//        }
-//        else{
-//            statusBar.text = "이메일 또는 비밀번호가 옳지 않습니다."
-//        }
-    }
+        { (user, error) in
+            if user != nil {
+                self.statusBar.text = "로그인 성공"
+                print("Log In Success!")
+            }
+            else{
+                self.statusBar.text = "이메일 또는 비밀번호가 옳지 않습니다."
+                print("Log In Failed. \(error.debugDescription)")
+            }
+        }    }
 }
