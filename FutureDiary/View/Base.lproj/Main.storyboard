@@ -68,6 +68,9 @@
                                 <rect key="frame" x="20" y="773.66666666666663" width="353" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="회원가입"/>
+                                <connections>
+                                    <segue destination="7Pe-3f-TFf" kind="show" id="mfU-jz-2GY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="t6X-DB-6Ub"/>
@@ -93,16 +96,16 @@
             </objects>
             <point key="canvasLocation" x="-822.13740458015263" y="-35.211267605633807"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="UZz-rf-le9">
             <objects>
-                <viewController id="7Pe-3f-TFf" sceneMemberID="viewController">
+                <viewController restorationIdentifier="signInViewController" storyboardIdentifier="signInViewController" id="7Pe-3f-TFf" customClass="SignInViewController" customModule="FutureDiary" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gFE-Jl-jU3">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="fOV-Oi-unq">
-                                <rect key="frame" x="20" y="331.33333333333331" width="353" height="242.33333333333331"/>
+                                <rect key="frame" x="20" y="296.33333333333331" width="353" height="242.33333333333331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StateBar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wh2-81-0us">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
@@ -121,16 +124,19 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U3p-dg-eBL">
-                                        <rect key="frame" x="0.0" y="208.33333333333331" width="353" height="34"/>
+                                        <rect key="frame" x="0.0" y="208.33333333333337" width="353" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEY-LE-WRJ">
-                                <rect key="frame" x="20" y="773.66666666666663" width="353" height="34.333333333333371"/>
+                                <rect key="frame" x="20" y="738.66666666666663" width="353" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="가입"/>
+                                <connections>
+                                    <action selector="signInButtonClicked:" destination="7Pe-3f-TFf" eventType="touchUpInside" id="dCs-9e-rjP"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wd-jN-BD1">
                                 <rect key="frame" x="45.000000000000007" y="90" width="124.66666666666669" height="43"/>
@@ -158,6 +164,13 @@
                             <constraint firstItem="bEY-LE-WRJ" firstAttribute="top" secondItem="fOV-Oi-unq" secondAttribute="bottom" constant="200" id="kdI-mq-l5y"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="KHL-ku-HSj"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="q71-iD-GaL" id="Wce-Hi-0yh"/>
+                        <outlet property="nicknameTextField" destination="0Aq-Lc-Dj4" id="xM3-Kn-iLh"/>
+                        <outlet property="passwordTextField" destination="U3p-dg-eBL" id="Xfc-lE-C7q"/>
+                        <outlet property="statusBar" destination="wh2-81-0us" id="Z46-jD-i9c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Bx-1F-y61" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

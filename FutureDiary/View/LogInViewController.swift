@@ -35,7 +35,6 @@ class LogInViewController : UIViewController {
                 
             }
             else{
-                
                 self.statusBar.text = "이메일 또는 비밀번호가 옳지 않습니다."
                 print("Log In Failed. \(error.debugDescription)")
             }
