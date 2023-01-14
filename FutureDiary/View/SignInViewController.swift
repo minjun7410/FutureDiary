@@ -12,9 +12,7 @@ class SignInViewController : UIViewController{
     @IBOutlet weak var statusBar: UILabel!
     
     @IBOutlet weak var emailTextField: UITextField!
-    
-    @IBOutlet weak var nicknameTextField: UITextField!
-    
+        
     @IBOutlet weak var passwordTextField: UITextField!
     
     let authViewModel = AuthViewModel()
