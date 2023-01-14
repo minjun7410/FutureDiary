@@ -167,7 +167,7 @@
                     <navigationItem key="navigationItem" id="KHL-ku-HSj"/>
                     <connections>
                         <outlet property="emailTextField" destination="q71-iD-GaL" id="Wce-Hi-0yh"/>
-                        <outlet property="nicknameTextField" destination="0Aq-Lc-Dj4" id="xM3-Kn-iLh"/>
+                        <outlet property="nickNameTextField" destination="0Aq-Lc-Dj4" id="4tk-4h-v7e"/>
                         <outlet property="passwordTextField" destination="U3p-dg-eBL" id="Xfc-lE-C7q"/>
                         <outlet property="statusBar" destination="wh2-81-0us" id="Z46-jD-i9c"/>
                     </connections>
