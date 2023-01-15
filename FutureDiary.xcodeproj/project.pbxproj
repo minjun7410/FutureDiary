@@ -17,6 +17,7 @@
 		8A3E84962958566100D4DB99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A3E84942958566100D4DB99 /* LaunchScreen.storyboard */; };
 		8A494904296E7F1B00B0E02C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A494903296E7F1B00B0E02C /* GoogleService-Info.plist */; };
 		8A51A315296E97AB00185830 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A51A314296E97AB00185830 /* LogInViewController.swift */; };
+		8A6E78652974418500255665 /* DBViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E78642974418500255665 /* DBViewModel.swift */; };
 		8A8C6E58296E999600D67501 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C6E57296E999600D67501 /* AuthViewModel.swift */; };
 		8ACC212A295BFC0800DE104F /* DiaryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACC2129295BFC0800DE104F /* DiaryListViewModel.swift */; };
 		8AD3B6B62959772B008B296C /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD3B6B52959772B008B296C /* CreateViewController.swift */; };
@@ -40,6 +41,7 @@
 		8A4948FD296DB9B200B0E02C /* FutureDiaryRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FutureDiaryRelease.entitlements; sourceTree = "<group>"; };
 		8A494903296E7F1B00B0E02C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8A51A314296E97AB00185830 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		8A6E78642974418500255665 /* DBViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBViewModel.swift; sourceTree = "<group>"; };
 		8A8C6E57296E999600D67501 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		8ACC2129295BFC0800DE104F /* DiaryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewModel.swift; sourceTree = "<group>"; };
 		8AD3B6B52959772B008B296C /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			children = (
 				8ACC2129295BFC0800DE104F /* DiaryListViewModel.swift */,
 				8A8C6E57296E999600D67501 /* AuthViewModel.swift */,
+				8A6E78642974418500255665 /* DBViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			files = (
 				8A214F802971A301000C4DF7 /* SignInViewController.swift in Sources */,
 				8A8C6E58296E999600D67501 /* AuthViewModel.swift in Sources */,
+				8A6E78652974418500255665 /* DBViewModel.swift in Sources */,
 				8AD3B6B62959772B008B296C /* CreateViewController.swift in Sources */,
 				8AD3B6B92959C51B008B296C /* Diary.swift in Sources */,
 				8A51A315296E97AB00185830 /* LogInViewController.swift in Sources */,

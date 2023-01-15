@@ -18,6 +18,7 @@ class SignInViewController : UIViewController{
     @IBOutlet weak var passwordTextField: UITextField!
     
     let authViewModel = AuthViewModel()
+    let dbViewModel = DBViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +29,12 @@ class SignInViewController : UIViewController{
     @IBAction func signInButtonClicked(_ sender: Any) {
         let email:String = emailTextField.text!
         let password:String = passwordTextField.text!
+        let nickname:String = nickNameTextField.text!
         authViewModel.signIn(email: email, password: password) { user, error in
-            if user != nil {
+            if let user = user {
                 self.statusBar.text = "회원가입 성공!"
                 self.dismiss(animated: true)
+                self.dbViewModel.createUser(uid: user.user.uid, nickname: nickname)
                 print("Sign In Success!")
                 
             }
