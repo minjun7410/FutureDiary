@@ -24,12 +24,13 @@ class LogInViewController : UIViewController {
         let password:String = passwordTextBar.text!
         authViewModel.logIn(email:email, password:password)
         { (user, error) in
-            if user != nil {
+            if let user = user {
                 self.statusBar.text = "로그인 성공"
                 print("Log In Success!")
                 self.view.window?.rootViewController?.dismiss(animated: true, completion: {
                     guard let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "mainViewController") as? MainViewController else {return}
                     mainVC.modalPresentationStyle = .fullScreen
+                    mainVC.uid = user.user.uid
                     self.present(mainVC, animated: true)
                 })
                 

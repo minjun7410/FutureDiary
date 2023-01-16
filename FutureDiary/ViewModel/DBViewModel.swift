@@ -21,4 +21,9 @@ class DBViewModel : NSObject {
             }
         }
     }
+    func getNickname(uid:String, completeClosure: @escaping ((DocumentSnapshot?, Error?) -> Void)) -> String{
+        let docRef = db.collection("users").document(uid)
+        docRef.getDocument(completion: completeClosure)
+        return "Unknown"
+    }
 }

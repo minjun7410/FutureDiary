@@ -326,6 +326,7 @@
                     </view>
                     <connections>
                         <outlet property="diaryListTableView" destination="apF-F0-KfB" id="1fq-L4-Gks"/>
+                        <outlet property="nicknameLabel" destination="VUD-ze-ZkO" id="bIV-DU-ovg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

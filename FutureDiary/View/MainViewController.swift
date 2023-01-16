@@ -6,13 +6,18 @@
 //
 
 import UIKit
+
 protocol SendDataDelegate{
     func receiveData(date:Date, emotion:String?, content:String, doCalendar:Bool, imageData:Data?) -> Void
 }
 class MainViewController: UIViewController, SendDataDelegate, UITableViewDelegate, UITableViewDataSource {
     
     let diaryListViewModel = DiaryListViewModel()
+    let dbViewModel = DBViewModel()
     
+    var uid: String!
+    
+    @IBOutlet weak var nicknameLabel: UILabel!
     @IBOutlet weak var diaryListTableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,6 +51,22 @@ class MainViewController: UIViewController, SendDataDelegate, UITableViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("Current UID is \(uid ?? "Unknown"))")
+        
+        self.nicknameLabel.text = dbViewModel.getNickname(uid: uid, completeClosure: {document, error in
+            if let error = error {
+                print("Error occred by \(error)")
+                
+            }
+            else{
+                if let document = document {
+                    self.nicknameLabel.text = document.data()?["nickname"] as? String
+                }
+            }
+        }
+        ) + "님의 일기장"
+        
         self.diaryListTableView.rowHeight = UITableView.automaticDimension
         self.diaryListTableView.estimatedRowHeight = 100
         // Do any additional setup after loading the view.
