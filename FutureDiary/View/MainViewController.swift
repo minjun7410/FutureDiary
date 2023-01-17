@@ -85,7 +85,6 @@ class MainViewController: UIViewController, SendDataDelegate, UITableViewDelegat
     func receiveData(date:Date, emotion:String?, content:String, doCalendar:Bool, imageData:Data?) {
         diaryListViewModel.createDiaryData(uid:uid, date:date, emotion: emotion, content: content, imageData:imageData)
         diaryListTableView.reloadData()
-        
     }
 }
 

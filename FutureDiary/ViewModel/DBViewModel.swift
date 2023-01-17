@@ -34,6 +34,10 @@ class DBViewModel : NSObject {
                 print("Error adding document: \(err)")
             } else {
                 print("Document added with ID: \(ref!.documentID)")
+                if let imageData = imageData {
+                    self.storageViewModel.uploadImage(uID: uid, docID: ref!.documentID, imageData: imageData)
+
+                }
             }
         }
     }
