@@ -8,6 +8,8 @@
 import Foundation
 
 class DiaryListViewModel: NSObject{
+    let dbViewModel = DBViewModel()
+    
     var diary: Diary!
     var diaryList: [Diary]!
     override init() {
@@ -15,9 +17,11 @@ class DiaryListViewModel: NSObject{
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         diaryList = []
     }
-    func createDiaryData(date:Date, emotion: String?, content: String, imageData:Data?){
+    func createDiaryData(uid:String, date:Date, emotion: String?, content: String, imageData:Data?){
         diary = Diary(date: date, emotion: emotion, content: content, imageData: imageData)
         print("DiaryList appended ( \(date), \(content) ) in DiaryCreateViewModel")
+        
+        dbViewModel.makeDocument(uid: uid, date: date, emotion: emotion, content: content, imageData: imageData)
         diaryList.append(diary)
     }
     func deleteDiaryData(index:Int){

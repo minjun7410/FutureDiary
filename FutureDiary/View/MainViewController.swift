@@ -14,6 +14,7 @@ class MainViewController: UIViewController, SendDataDelegate, UITableViewDelegat
     
     let diaryListViewModel = DiaryListViewModel()
     let dbViewModel = DBViewModel()
+    let storageViewModel = StorageViewModel()
     
     var uid: String!
     
@@ -82,7 +83,7 @@ class MainViewController: UIViewController, SendDataDelegate, UITableViewDelegat
     }
     
     func receiveData(date:Date, emotion:String?, content:String, doCalendar:Bool, imageData:Data?) {
-        diaryListViewModel.createDiaryData(date:date, emotion: emotion, content: content, imageData:imageData)
+        diaryListViewModel.createDiaryData(uid:uid, date:date, emotion: emotion, content: content, imageData:imageData)
         diaryListTableView.reloadData()
         
     }
