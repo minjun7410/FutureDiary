@@ -11,8 +11,7 @@ import FirebaseFirestore
 class DBViewModel : NSObject {
     let db = Firestore.firestore()
     func createUser(uid:String, nickname:String){
-        db.collection("users").document(uid).setData(["nickname": nickname]){
-            err in
+        db.collection("users").document(uid).setData(["nickname": nickname]){ err in
             if let err = err {
                 print("Error Occured from addDocument : \(err)")
             }
@@ -21,6 +20,7 @@ class DBViewModel : NSObject {
             }
         }
     }
+    
     func getNickname(uid:String, completeClosure: @escaping ((DocumentSnapshot?, Error?) -> Void)) -> String{
         let docRef = db.collection("users").document(uid)
         docRef.getDocument(completion: completeClosure)

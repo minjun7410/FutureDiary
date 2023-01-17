@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1CEC1E2B4DEDCF7163E0CF30 /* Pods_FutureDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4556EB7F4A4CBACDBB70A76B /* Pods_FutureDiary.framework */; };
 		8A214F802971A301000C4DF7 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A214F7F2971A301000C4DF7 /* SignInViewController.swift */; };
+		8A2C56CD2976AA6D00C6186F /* StorageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2C56CC2976AA6D00C6186F /* StorageViewModel.swift */; };
 		8A3E848A2958566000D4DB99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E84892958566000D4DB99 /* AppDelegate.swift */; };
 		8A3E848C2958566000D4DB99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E848B2958566000D4DB99 /* SceneDelegate.swift */; };
 		8A3E848E2958566000D4DB99 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E848D2958566000D4DB99 /* MainViewController.swift */; };
@@ -30,6 +31,7 @@
 		4556EB7F4A4CBACDBB70A76B /* Pods_FutureDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FutureDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6433804902D522FC60AAC1F6 /* Pods-FutureDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FutureDiary.release.xcconfig"; path = "Target Support Files/Pods-FutureDiary/Pods-FutureDiary.release.xcconfig"; sourceTree = "<group>"; };
 		8A214F7F2971A301000C4DF7 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		8A2C56CC2976AA6D00C6186F /* StorageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageViewModel.swift; sourceTree = "<group>"; };
 		8A3E84862958566000D4DB99 /* FutureDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FutureDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3E84892958566000D4DB99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A3E848B2958566000D4DB99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				8ACC2129295BFC0800DE104F /* DiaryListViewModel.swift */,
 				8A8C6E57296E999600D67501 /* AuthViewModel.swift */,
 				8A6E78642974418500255665 /* DBViewModel.swift */,
+				8A2C56CC2976AA6D00C6186F /* StorageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			files = (
 				8A214F802971A301000C4DF7 /* SignInViewController.swift in Sources */,
 				8A8C6E58296E999600D67501 /* AuthViewModel.swift in Sources */,
+				8A2C56CD2976AA6D00C6186F /* StorageViewModel.swift in Sources */,
 				8A6E78652974418500255665 /* DBViewModel.swift in Sources */,
 				8AD3B6B62959772B008B296C /* CreateViewController.swift in Sources */,
 				8AD3B6B92959C51B008B296C /* Diary.swift in Sources */,
