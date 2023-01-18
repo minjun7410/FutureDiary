@@ -12,13 +12,12 @@ class CreateViewController: UIViewController {
     @IBOutlet weak var textEmotion: UITextField!
     @IBOutlet weak var textContent: UITextView!
     @IBOutlet weak var calendarSwitch: UISwitch!
-    
     @IBOutlet weak var imageView: UIImageView!
-    
     @IBOutlet weak var imgInsertBtn: UIButton!
     
     var dataDelegate: SendDataDelegate?
     let imgPicker = UIImagePickerController()
+    let storageViewModel = StorageViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +49,6 @@ extension CreateViewController: UIImagePickerControllerDelegate, UINavigationCon
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let img = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             imageView.contentMode = .scaleAspectFit
-            
             imageView.image = img
         }
         
