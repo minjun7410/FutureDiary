@@ -31,7 +31,9 @@ class LogInViewController : UIViewController {
                     guard let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "mainViewController") as? MainViewController else {return}
                     mainVC.modalPresentationStyle = .fullScreen
                     mainVC.uid = user.user.uid
-                    self.present(mainVC, animated: true)
+                    mainVC.diaryListViewModel.initDiaryList(uID: mainVC.uid){
+                        self.present(mainVC, animated: true)
+                    }
                 })
                 
             }

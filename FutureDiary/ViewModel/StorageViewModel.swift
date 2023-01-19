@@ -27,19 +27,19 @@ class StorageViewModel : NSObject {
             }
         }
     }
-    func getImage(uID:String, docID: String, completion: @escaping (UIImage) -> Void){
+    func getImage(uID:String, docID: String, completion: @escaping (Data?) -> Void){
         let storagePath = "gs://futurediary-1d630.appspot.com/\(uID)/\(docID).jpg"
         let storageRef = storage.reference(forURL: storagePath)
         storageRef.downloadURL{(url, error) in
             if let url = url{
                 let data = NSData(contentsOf: url)
                 if let data = data{
-                    let image = UIImage(data: data as Data)
-                    completion(image! as UIImage)
+                    completion(data as Data)
                 }
             }
             if let error = error{
                 print("Error Occured in getting image : \(error)")
+                completion(nil)
             }
         }
     }

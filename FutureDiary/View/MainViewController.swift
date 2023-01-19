@@ -12,7 +12,7 @@ protocol SendDataDelegate{
 }
 class MainViewController: UIViewController, SendDataDelegate, UITableViewDelegate, UITableViewDataSource {
     
-    let diaryListViewModel = DiaryListViewModel()
+    var diaryListViewModel = DiaryListViewModel()
     let dbViewModel = DBViewModel()
     let storageViewModel = StorageViewModel()
     
@@ -52,9 +52,7 @@ class MainViewController: UIViewController, SendDataDelegate, UITableViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         print("Current UID is \(uid ?? "Unknown"))")
-        
         self.nicknameLabel.text = dbViewModel.getNickname(uid: uid, completeClosure: {document, error in
             if let error = error {
                 print("Error occred by \(error)")
