@@ -29,7 +29,6 @@ class DiaryListViewModel: NSObject{
     func createDiaryData(uid:String, date:Date, emotion: String?, content: String, imageData:Data?){
         diary = Diary(date: date, emotion: emotion, content: content, imageData: imageData)
         print("DiaryList appended ( \(date), \(content) ) in DiaryCreateViewModel")
-        
         dbViewModel.makeDocument(uid: uid, date: date, emotion: emotion, content: content, imageData: imageData)
         diaryList.append(diary)
     }
