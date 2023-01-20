@@ -138,6 +138,14 @@
                                     <action selector="signInButtonClicked:" destination="7Pe-3f-TFf" eventType="touchUpInside" id="dCs-9e-rjP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Eh-JP-zFe" userLabel="취소">
+                                <rect key="frame" x="20" y="704.33333333333337" width="353" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="취소"/>
+                                <connections>
+                                    <action selector="cancelButtonClicked:" destination="7Pe-3f-TFf" eventType="touchUpInside" id="3IZ-2k-PEm"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wd-jN-BD1">
                                 <rect key="frame" x="45.000000000000007" y="90" width="124.66666666666669" height="43"/>
                                 <attributedString key="attributedText">
@@ -157,11 +165,14 @@
                             <constraint firstItem="4Wd-jN-BD1" firstAttribute="leading" secondItem="slu-BA-7QS" secondAttribute="leading" constant="45" id="2O4-uN-msM"/>
                             <constraint firstItem="slu-BA-7QS" firstAttribute="trailing" secondItem="fOV-Oi-unq" secondAttribute="trailing" constant="20" id="M7x-LR-2wX"/>
                             <constraint firstItem="bEY-LE-WRJ" firstAttribute="leading" secondItem="slu-BA-7QS" secondAttribute="leading" constant="20" id="W4w-ql-Bbh"/>
+                            <constraint firstItem="bEY-LE-WRJ" firstAttribute="top" secondItem="1Eh-JP-zFe" secondAttribute="bottom" id="eju-f3-0CD"/>
                             <constraint firstItem="fOV-Oi-unq" firstAttribute="leading" secondItem="slu-BA-7QS" secondAttribute="leading" constant="20" id="hE0-FM-6iS"/>
                             <constraint firstItem="slu-BA-7QS" firstAttribute="trailing" secondItem="bEY-LE-WRJ" secondAttribute="trailing" constant="20" id="hyc-LQ-ieM"/>
                             <constraint firstItem="slu-BA-7QS" firstAttribute="bottom" secondItem="bEY-LE-WRJ" secondAttribute="bottom" constant="10" id="jOd-cv-Uyt"/>
                             <constraint firstItem="4Wd-jN-BD1" firstAttribute="top" secondItem="slu-BA-7QS" secondAttribute="top" constant="31" id="jsH-FK-UOm"/>
-                            <constraint firstItem="bEY-LE-WRJ" firstAttribute="top" secondItem="fOV-Oi-unq" secondAttribute="bottom" constant="200" id="kdI-mq-l5y"/>
+                            <constraint firstItem="1Eh-JP-zFe" firstAttribute="top" secondItem="fOV-Oi-unq" secondAttribute="bottom" constant="165.66666666666674" id="kdI-mq-l5y"/>
+                            <constraint firstItem="slu-BA-7QS" firstAttribute="trailing" secondItem="1Eh-JP-zFe" secondAttribute="trailing" constant="20" id="pFp-sD-8Uw"/>
+                            <constraint firstItem="1Eh-JP-zFe" firstAttribute="leading" secondItem="slu-BA-7QS" secondAttribute="leading" constant="20" id="zXq-2C-xWc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KHL-ku-HSj"/>
@@ -432,16 +443,24 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IfR-JY-XYZ">
                                                 <rect key="frame" x="0.0" y="164" width="373" height="34.333333333333343"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="캘린더에 추가:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rs-vk-3Nw">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="캘린더에 추가:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rs-vk-3Nw">
                                                         <rect key="frame" x="0.0" y="0.0" width="97.333333333333329" height="34.333333333333336"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="20x-2Z-lib">
-                                                        <rect key="frame" x="107.33333333333331" y="0.0" width="204" height="34.333333333333336"/>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="20x-2Z-lib">
+                                                        <rect key="frame" x="107.33333333333333" y="0.0" width="140.33333333333337" height="34.333333333333336"/>
                                                     </switch>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="200" verticalHuggingPriority="200" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPc-rE-7Cd">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b58-TU-ANk">
+                                                        <rect key="frame" x="255.66666666666666" y="0.0" width="53.666666666666657" height="34.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="취소"/>
+                                                        <connections>
+                                                            <action selector="cancelButtonClicked:" destination="nq5-Ou-FBx" eventType="touchUpInside" id="ofR-oI-Y8W"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="200" verticalHuggingPriority="200" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPc-rE-7Cd">
                                                         <rect key="frame" x="319.33333333333331" y="0.0" width="53.666666666666686" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="완료"/>

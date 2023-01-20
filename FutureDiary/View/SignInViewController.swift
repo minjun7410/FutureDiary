@@ -44,4 +44,8 @@ class SignInViewController : UIViewController{
             }
         }
     }
+    @IBAction func cancelButtonClicked(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
 }

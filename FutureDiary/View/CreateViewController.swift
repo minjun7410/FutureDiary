@@ -37,6 +37,9 @@ class CreateViewController: UIViewController {
         dismiss(animated: true)
     }
     
+    @IBAction func cancelButtonClicked(_ sender: Any) {
+        dismiss(animated: true)
+    }
     @IBAction func imgInsertBtnPushed(_ sender: Any) {
         imgPicker.sourceType = .photoLibrary
         imgPicker.delegate = self
@@ -44,6 +47,7 @@ class CreateViewController: UIViewController {
         imgInsertBtn.isHidden = true
         present(imgPicker, animated: true)
     }
+    
 }
 extension CreateViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
