@@ -60,11 +60,11 @@ class MainViewController: UIViewController, SendDataDelegate, UITableViewDelegat
             }
             else{
                 if let document = document {
-                    self.nicknameLabel.text = document.data()?["nickname"] as? String
+                    self.nicknameLabel.text = (document.data()?["nickname"] as! String) + "님의 일기장"
                 }
             }
         }
-        ) + "님의 일기장"
+        )
         
         self.diaryListTableView.rowHeight = UITableView.automaticDimension
         self.diaryListTableView.estimatedRowHeight = 100
