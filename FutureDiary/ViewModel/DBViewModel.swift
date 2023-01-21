@@ -28,10 +28,12 @@ class DBViewModel : NSObject {
     }
     func makeDocument(uid:String, date:Date, emotion: String?, content: String, imageData: Data?){
         var ref: DocumentReference?
+        let haveImage = (imageData != nil) ? true : false
         ref = db.collection("users").document(uid).collection("diarys").addDocument(data:
                                                                                         ["date" : Timestamp(date: date),
                                                                                          "emotion" : emotion ?? "",
                                                                                          "content" : content,
+                                                                                         "haveImage" : haveImage
                                                                                         ])
         { err in
             if let err = err {
@@ -52,24 +54,36 @@ class DBViewModel : NSObject {
             else {
                 if let querySnapshot = querySnapshot {
                     var completeCount = 0
+                    let documentCount = querySnapshot.documents.count
+                    
+                    if documentCount == 0 {
+                        completeClosure()
+                        return
+                    }
+                    
                     for i in 0 ..< querySnapshot.documents.count{
                         let document = querySnapshot.documents[i]
                         let docID = document.documentID
                         let docData = document.data()
-                        
-                        self.storageViewModel.getImage(uID:uID, docID: docID) {(docImageData) in
+                        if docData["haveImage"] as! Bool {
+                            self.storageViewModel.getImage(uID:uID, docID: docID) {(docImageData) in
+                                completeCount += 1
+                                let date = docData["date"] as? Timestamp
+                                let diary = Diary(date:date!.dateValue(), emotion:docData["emotion"] as? String, content:docData["content"] as! String, imageData: docImageData!)
+                                
+                                addingClosure(diary)
+                                
+                                if completeCount == querySnapshot.documents.count {
+                                    completeClosure()
+                                }
+                            }
+                        }
+                        else{
                             completeCount += 1
-                            if let docImageData = docImageData{
-                                let date = docData["date"] as? Timestamp
-                                let diary = Diary(date:date!.dateValue(), emotion:docData["emotion"] as? String, content:docData["content"] as! String, imageData: docImageData)
-                                addingClosure(diary)
-                            }
-                            else{
-                                let date = docData["date"] as? Timestamp
-                                let diary = Diary(date:date!.dateValue(), emotion:docData["emotion"] as? String, content:docData["content"] as! String, imageData: nil)
-                                addingClosure(diary)
-                            }
-                            if completeCount == querySnapshot.documents.count-1 {
+                            let date = docData["date"] as? Timestamp
+                            let diary = Diary(date:date!.dateValue(), emotion:docData["emotion"] as? String, content:docData["content"] as! String, imageData: nil)
+                            addingClosure(diary)
+                            if completeCount == querySnapshot.documents.count {
                                 completeClosure()
                             }
                         }
